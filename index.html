@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu namoro</title>
+    <style>
+
+        main{
+            display: flex;
+            justify-content: center;
+        }
+
+        body{
+            background-color: bisque;
+        }
+
+        img{    
+            width: 300px;
+            padding-top: 20px;
+        }
+
+        #frase{
+            font-size: 20px;
+            padding-top: 75px;
+            border-top: 70px;
+            color: crimson;
+        }
+
+    </style>
+            
+</head>
+<body>
+    <main>
+        <form>
+            <h1>candidatura á uma vaga de emprego (só para homens, pois sou casado)</h1>
+            
+            <label for="Nome">Nome:</label>
+            <input type="text" id="Nome" placeholder="proibido nome de fêmea"><br><br>
+            
+            <label for="Email">Email:</label>
+            <input type="email" id="Email" placeholder="soucasado@maried.com" size="30"><br><br>
+
+            <Label for="Telefone">Telefone:</Label>
+            <input type="tel" pattern="[0-9]{11}" oninput="this.value = this.value.replace(/[^0-9]/g, '')" placeholder="Não vou usar(pois não tenho nenhum numero salvo a não ser o da minha namorada)" size="75" maxlength="11" id="Telefone"><br><br>
+
+            <label for="Cargo">escolha o cargo desejado:</label><br><br>
+            <input type="checkbox" id="checkbox1" class="exclusive-checkbox">
+            <label for="checkbox1">Designer</label><br>
+        
+            <input type="checkbox" id="checkbox2" class="exclusive-checkbox">
+            <label for="checkbox2">Desenvolvedor</label><br><br>
+
+            <label>Escolha a cidade:</label>
+            <select name="Cidade" id="Cidade">
+                <option>Selecione</option>
+                <option>Porto Alegre</option>
+                <option>Nova Hartz</option>
+                <option>País das Maravílhas</option>
+            </select><br><br>
+
+            <label for="Curriculo">envie seu curriculo</label><br>
+            <input type="file" id="Curriculo" accept=""><br><br>
+
+            <label for="Mensagem">mensagem:</label><br>
+            <textarea name="mensagem" id="Mensagem" cols="25" rows="4" required placeholder="não escreva nada pois não aceito mensagens que não sejam do meu neném"></textarea><br><br>
+
+            <input type="submit" value="enviar">
+            <input type="reset" value="limpar">
+        </form>
+        <!--IMAGEM-->
+        <div>
+            <label id="frase" for="imagem">Foto de eu e ela pois samos casados</label>
+            <img src="ois.png" id="imagem" alt="eu i ela (quebrei a imagem propositalmente)">
+        </div>
+    </main>
+
+
+    <!--JAVASCRIPT-->
+    <script>
+        const checkboxes = document.querySelectorAll('.exclusive-checkbox');
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                checkboxes.forEach(otherCheckbox => {
+                if (otherCheckbox !== checkbox) {
+                    otherCheckbox.checked = false;
+                }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
