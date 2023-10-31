@@ -4,36 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eu namoro</title>
-    <style>
-
-        main{
-            display: flex;
-            justify-content: center;
-        }
-
-        body{
-            background-color: bisque;
-        }
-
-        img{    
-            width: 300px;
-            padding-top: 20px;
-        }
-
-        #frase{
-            font-size: 20px;
-            padding-top: 75px;
-            border-top: 70px;
-            color: crimson;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
             
 </head>
 <body>
     <main>
         <form>
-            <h1>candidatura á uma vaga de emprego (só para homens, pois sou casado)</h1>
+            <h1>Candidatura á uma vaga de emprego (só para homens, pois sou casado)</h1>
             
             <label for="Nome">Nome:</label>
             <input type="text" id="Nome" placeholder="proibido nome de fêmea"><br><br>
@@ -75,20 +52,6 @@
         </div>
     </main>
 
-
-    <!--JAVASCRIPT-->
-    <script>
-        const checkboxes = document.querySelectorAll('.exclusive-checkbox');
-
-        checkboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', () => {
-                checkboxes.forEach(otherCheckbox => {
-                if (otherCheckbox !== checkbox) {
-                    otherCheckbox.checked = false;
-                }
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
