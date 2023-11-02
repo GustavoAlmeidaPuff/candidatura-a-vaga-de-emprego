@@ -8,4 +8,4 @@ const checkboxes = document.querySelectorAll('.exclusive-checkbox');
             }
         });
     });
-});
+});p
