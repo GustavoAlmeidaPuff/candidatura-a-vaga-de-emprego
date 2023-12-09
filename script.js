@@ -8,4 +8,7 @@ const checkboxes = document.querySelectorAll('.exclusive-checkbox');
             }
         });
     });
-});p
+});
+// sdadsasda
+
+let x = "oi"
